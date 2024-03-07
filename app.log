@@ -1,0 +1,13 @@
+DEBUG:root:This is images_and_labels: []
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:43:12] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\khang\\OneDrive\\Desktop\\SCHOOL\\SPRING_senior_2024\\EC530\\project_2\\ML_api.py', reloading
+DEBUG:root:This is images_and_labels: []
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:43:32] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:44:01] "POST /upload_image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:44:01] "POST /upload_image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:44:01] "POST /upload_image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:44:01] "POST /upload_image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:44:01] "POST /upload_labels HTTP/1.1" 200 -
+DEBUG:root:This is images_and_labels: [{'filename': '1.jpg', 'label': 'Lionel Messi'}, {'filename': '2.jpg', 'label': 'Cristiano Ronaldo'}, {'filename': '3.jpg', 'label': 'LeBron James'}, {'filename': '4.jpg', 'label': 'Michael Jordan'}]
+INFO:werkzeug:127.0.0.1 - - [06/Mar/2024 22:44:17] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\khang\\OneDrive\\Desktop\\SCHOOL\\SPRING_senior_2024\\EC530\\project_2\\ML_api.py', reloading
