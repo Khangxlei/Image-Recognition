@@ -1,0 +1,45 @@
+INFO:werkzeug: * Detected change in 'C:\\Users\\khang\\OneDrive\\Desktop\\SCHOOL\\SPRING_senior_2024\\EC530\\project_2\\modules\\upload_images.py', reloading
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+DEBUG:root:this is data_str:b''
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "[35m[1mPOST /upload_image HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:42:21] "POST /upload_labels HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\khang\\OneDrive\\Desktop\\SCHOOL\\SPRING_senior_2024\\EC530\\project_2\\modules\\upload_images.py', reloading
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+DEBUG:root:this is user_id:khangxlei
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_image HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Mar/2024 21:45:28] "POST /upload_labels HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\khang\\OneDrive\\Desktop\\SCHOOL\\SPRING_senior_2024\\EC530\\project_2\\modules\\upload_images.py', reloading
