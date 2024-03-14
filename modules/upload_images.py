@@ -1,6 +1,8 @@
 from flask import Blueprint, request, jsonify
 import os
 from werkzeug.utils import secure_filename
+import json
+import logging
 
 from modules.database import save_image_to_db
 
@@ -28,8 +30,11 @@ def upload_image():
     if 'file' not in request.files:
         print(request.files)
         return jsonify({'error': 'No file part'}), 400
-    
+
     file = request.files['file']
+    
+    user_id = request.args.get('user_id')
+    data_id = request.args.get('data_id')
 
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
@@ -47,7 +52,7 @@ def upload_image():
         image_data = file.read()
 
         # Save data to database
-        save_image_to_db(filename, image_data)
+        save_image_to_db(user_id, data_id, filename, image_data)
 
         file.save(os.path.join(upload_folder, filename))
         return jsonify({'message': 'File uploaded successfully'}), 200
