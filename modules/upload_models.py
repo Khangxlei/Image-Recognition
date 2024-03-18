@@ -28,12 +28,12 @@ def allowed_file(filename):
 def upload_model():    
     if 'file' not in request.files:
         print(request.files)
-        return jsonify({'error': 'No file part'}), 400
+        return jsonify({'error': 'No file part', 'status_code': 400}), 400
     
     file = request.files['file']
 
     if file.filename == '':
-        return jsonify({'error': 'No selected file'}), 400
+        return jsonify({'error': 'No selected file', 'status_code': 400}), 400
     
     # Ensure the upload directory exists
     upload_folder = upload_models.config['MODELS_UPLOAD_FOLDER']
@@ -46,8 +46,10 @@ def upload_model():
 
         upload_path = str(os.path.join(upload_folder, filename))
         file.save(upload_path)
+
+        user_id = request.args.get('user_id')
         
-        save_model_to_db(upload_path)
-        return jsonify({'message': 'File uploaded successfully'}), 200
+        save_model_to_db(upload_path, user_id)
+        return jsonify({'message': 'File uploaded successfully', 'status_code': 200}), 200
     else:
-        return jsonify({'error': 'Invalid file format'}), 400
+        return jsonify({'error': 'Invalid file format', 'status_code': 400}), 400

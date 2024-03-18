@@ -1,0 +1,18 @@
+[
+  "data_upload_test.py::test_upload_image[../uploads/data/images-khang-cifar10v2-10]",
+  "data_upload_test.py::test_upload_image[../uploads/data/images-khangle-cifar10v3-10]",
+  "data_upload_test.py::test_upload_image[../uploads/data/images-khangxlei-cifar10-10]",
+  "data_upload_test.py::test_upload_labels[../uploads/data/labels/labels.txt-khang-cifar10v2]",
+  "data_upload_test.py::test_upload_labels[../uploads/data/labels/labels.txt-khangle-cifar10v3]",
+  "data_upload_test.py::test_upload_labels[../uploads/data/labels/labels.txt-khangxlei-cifar10]",
+  "data_upload_test.py::test_upload_labels[uploads/data/labels/labels.txt-khangxlei-cifar10]",
+  "inference_test.py::test_train[parameters0-khangxlei-cifar10]",
+  "inference_test.py::test_train[parameters1-khang-cifar10v2]",
+  "inference_test.py::test_train[parameters2-khangle-cifar10v3]",
+  "model_upload_test.py::test_upload_model[../uploads/models-khang-1]",
+  "model_upload_test.py::test_upload_model[../uploads/models-khangle-1]",
+  "model_upload_test.py::test_upload_model[../uploads/models-khangxlei-1]",
+  "train_test.py::test_train[parameters0-khangxlei-cifar10]",
+  "train_test.py::test_train[parameters1-khang-cifar10v2]",
+  "train_test.py::test_train[parameters2-khangle-cifar10v3]"
+]

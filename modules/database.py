@@ -38,8 +38,6 @@ def get_images_and_labels(user_id, data_id):
         AND images.user_id = ? AND labels.user_id = ?;
     """
 
-
-
     # Execute the SQL query
     cursor.execute(sql_query, (data_id, data_id, user_id, user_id))
 
@@ -75,16 +73,17 @@ def get_images_and_labels(user_id, data_id):
     # Return the structured data
     return image_data_list
 
-def get_image_id(image_name):
+def get_image_id(filename, user_id, data_id):
     db = get_db()
     cursor = db.cursor()
-    cursor.execute('SELECT id FROM images WHERE filename = ?', (image_name,))
+    cursor.execute('SELECT id FROM images WHERE filename = ? AND user_id = ? AND data_id = ?', (filename, user_id, data_id))
     result = cursor.fetchone()
     if result:
         return result[0]  # Return the image_id
     else:
-        print("Image with filename '{}' not found.".format(image_name))
+        print("Image with filename '{}' for user_id '{}' and data_id '{}' not found.".format(filename, user_id, data_id))
         return None
+
     
 def save_image_to_db(user_id, data_id, filename, image_data):
     db = get_db()
@@ -92,7 +91,7 @@ def save_image_to_db(user_id, data_id, filename, image_data):
     db.commit()
 
 def save_labels_to_db(user_id, data_id, image_name, label):
-    image_id = get_image_id(image_name)
+    image_id = get_image_id(image_name, user_id, data_id)
     if image_id is not None:
         db = get_db()
         # Insert into labels table with image_id and label
@@ -105,8 +104,8 @@ def save_train_to_db(trained_model_file_path, loss, accuracy, optimizer_type, lr
                (trained_model_file_path, loss, accuracy, optimizer_type, lr, momentum, epochs, training_time_seconds, training_time_minutes))
     db.commit()
 
-def save_model_to_db(upload_path):
+def save_model_to_db(upload_path, user_id):
     db = get_db()
-    db.execute('INSERT INTO models (model_path) VALUES (?)', [upload_path])
+    db.execute('INSERT INTO models (model_path, user_id) VALUES (?, ?)', [upload_path, user_id])
     db.commit()
 
