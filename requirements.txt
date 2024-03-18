@@ -4,3 +4,4 @@ torch==2.2.1
 torchvision==0.17.1
 Werkzeug==3.0.1
 requests==2.31.0
+tensorflow==2.16.1
