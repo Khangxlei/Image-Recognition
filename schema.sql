@@ -35,5 +35,6 @@ CREATE TABLE trains (
 
 CREATE TABLE models (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id TEXT,
     model_path TEXT
 );
