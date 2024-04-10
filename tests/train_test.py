@@ -63,7 +63,7 @@ def worker():
         task_queue.task_done()
 
 # Start worker threads
-num_worker_threads = 3  # Define the number of worker threads
+num_worker_threads = 1 # Define the number of worker threads
 for i in range(num_worker_threads):
     t = threading.Thread(target=worker)
     t.daemon = True
