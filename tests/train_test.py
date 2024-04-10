@@ -101,7 +101,7 @@ def test_train(parameters, user_id, data_id):
     pass  # No need to enqueue tasks here, pytest fixture will take care of it
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
     # task_queue = queue.Queue()
 
