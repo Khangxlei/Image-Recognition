@@ -86,7 +86,9 @@ def add_training_requests():
 def test_train(parameters, user_id, data_id):
     pass
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+
+
     # Define parameters and IDs for each task
     # parameters = {
     #     'model_filename': 'model1.h5',
