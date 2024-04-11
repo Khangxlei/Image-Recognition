@@ -3,7 +3,6 @@ import os
 
 from modules.database import *
 from modules.upload_data import *
-# from modules.upload_labels import *
 from modules.train_model import *
 from modules.upload_models import *
 from modules.inference_data import *

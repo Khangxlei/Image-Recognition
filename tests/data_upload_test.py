@@ -69,6 +69,7 @@ def test_upload_image(folder_path, user_id, data_id, expected_uploaded_files):
     ('../uploads/data/labels/labels.txt', 'khang', 'cifar10v2'),
     ('../uploads/data/labels/labels.txt', 'khangle', 'cifar10v3')
 ])
+
 def test_upload_labels(file_path, user_id, data_id):
     upload_response = upload_labels(file_path, user_id, data_id)    
     assert upload_response['message'] == 'Labels uploaded succesfully'

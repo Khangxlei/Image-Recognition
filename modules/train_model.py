@@ -11,7 +11,6 @@ from sklearn.preprocessing import LabelEncoder
 import numpy as np
 from tensorflow.keras.losses import SparseCategoricalCrossentropy, BinaryCrossentropy, MeanSquaredError
 
-
 from modules.database import save_train_to_db, get_images_and_labels
 
 train_model = Blueprint('train_model', __name__)
@@ -100,8 +99,10 @@ def get_loss_function(loss_name):
 
 @train_model.route('/train', methods=['POST'])
 def train():
+
     # Configure logging
     logging.basicConfig(filename='train.log', level=logging.DEBUG)
+    
 
     # user inputs
     parameters = request.json 
@@ -117,11 +118,14 @@ def train():
     if epochs == None:
         epochs = 10
     
-
+    
     # Retrieve image filenames and labels from the database
     data_dict = get_images_and_labels(user_id, data_id)
+    
 
     dataset = preprocess(data_dict, img_height, img_width)
+
+    
 
     logging.debug(f'Completed preprocessing')
 
@@ -136,6 +140,8 @@ def train():
     # Use logging instead of print statements
     logging.debug(f'This is data_dict: {data_dict}')
     logging.debug(f'This is dataset: {dataset}')
+
+    
 
     # Load the model (including architecture, weights, and optimizer state)
     model_filename = parameters.get('model_filename')

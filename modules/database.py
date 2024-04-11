@@ -45,7 +45,6 @@ def get_images_and_labels(user_id, data_id):
     # Fetch all the results
     results = cursor.fetchall()
 
-    
 
     # Define a list to hold the data
     image_data_list = []
@@ -84,7 +83,6 @@ def get_image_id(filename, user_id, data_id):
         print("Image with filename '{}' for user_id '{}' and data_id '{}' not found.".format(filename, user_id, data_id))
         return None
 
-    
 def save_image_to_db(user_id, data_id, filename, image_data):
     db = get_db()
     db.execute('INSERT INTO images (user_id, data_id, filename, image_data) VALUES (?, ?, ?, ?)', (user_id, data_id, filename, image_data))

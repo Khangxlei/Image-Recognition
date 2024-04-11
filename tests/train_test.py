@@ -103,43 +103,42 @@ def test_train(parameters, user_id, data_id):
 
 # if __name__ == "__main__":
 
-    # task_queue = queue.Queue()
+#     task_queue = queue.Queue()
 
-    # # Create worker threads
-    # num_workers = 3
-    # workers = []
-    # for _ in range(num_workers):
-    #     thread = threading.Thread(target=worker)
-    #     thread.start()
-    #     workers.append(thread)
+#     # Create worker threads
+#     num_workers = 3
+#     workers = []
+#     for _ in range(num_workers):
+#         thread = threading.Thread(target=worker)
+#         thread.start()
+#         workers.append(thread)
 
-    # # Define parameters and IDs for each task
-    # parameters = {
-    #     'epochs': 10,
-    #     'model_filename': 'model1.h5',
-    #     'loss_name': 'sparse_categorical_crossentropy',
-    #     'img_height': 32,
-    #     'img_width': 32
-    # }
+#     # Define parameters and IDs for each task
+#     parameters = {
+#         'epochs': 10,
+#         'model_filename': 'model1.h5',
+#         'loss_name': 'sparse_categorical_crossentropy',
+#         'img_height': 32,
+#         'img_width': 32
+#     }
 
-    # tasks = [
-    #     {'user_id': 'khangxlei', 'data_id': 'cifar10'},
-    #     {'user_id': 'khang', 'data_id': 'cifar10v2'},
-    #     {'user_id': 'khangle', 'data_id': 'cifar10v3'}
-    # ]
+#     tasks = [
+#         {'user_id': 'khangxlei', 'data_id': 'cifar10'},
+#         {'user_id': 'khang', 'data_id': 'cifar10v2'},
+#         {'user_id': 'khangle', 'data_id': 'cifar10v3'}
+#     ]
 
-    # # Enqueue tasks
-    # for task_data in tasks:
-    #     task_queue.put((parameters, task_data))
+#     # Enqueue tasks
+#     for task_data in tasks:
+#         task_queue.put((parameters, task_data))
 
-    # # Add sentinel values to signal workers to exit
-    # for _ in range(num_workers):
-    #     task_queue.put(None)
+#     # Add sentinel values to signal workers to exit
+#     for _ in range(num_workers):
+#         task_queue.put(None)
 
   
 
-    # print("All tasks completed")
-    
+#     print("All tasks completed")
    
     # parameters = {
     # 'epochs': 10,

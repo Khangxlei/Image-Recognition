@@ -2,18 +2,14 @@ from flask import Blueprint, request, jsonify
 import torch.nn as nn
 import logging
 import torch
-import torchvision
 import torchvision.transforms as transforms
 import os
 import time
 import tensorflow as tf
-from sklearn.preprocessing import LabelEncoder
 import numpy as np
-from tensorflow.keras.losses import SparseCategoricalCrossentropy, BinaryCrossentropy, MeanSquaredError
-
 
 from modules.database import get_images_and_labels
-from modules.train_model import get_loss_function, preprocess
+from modules.train_model import preprocess, get_loss_function
 
 inference_data = Blueprint('inference_data', __name__)
 
@@ -167,4 +163,3 @@ def save_model_parameters(model):
     # torch.save(model_state_dict, model_path)
     
     return model_path, trained_model_filename
-    
