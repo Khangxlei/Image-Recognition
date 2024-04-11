@@ -41,7 +41,7 @@ jobs:
     - name: Test with pytest
       run: |
         cd tests
-        pytest data_upload_test.py model_upload_test.py train_test.py inference_test.py
+        pytest auth_test.py data_upload_test.py model_upload_test.py train_test.py inference_test.py
     - name: CPU and Memory Profiling
       run: |
         cd profiling
