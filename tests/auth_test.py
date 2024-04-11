@@ -32,9 +32,10 @@ def login(username, password):
     return response
 
 @pytest.mark.parametrize("username, password, expected_message", [
-    ('khangxlei', 'khang', 'success'),
-    ('khangleii', 'password', 'success'),
-    ('khangxlei', 'password', 'failure')
+    ('khangxlei', 'Khang5472', 'success'),
+    ('khangleii', 'Password264', 'success'),
+    ('adam123', 'asd.', 'weak'),
+    ('khangxlei', 'PasswordStrong123', 'failure')
 ])
 def test_register(username, password, expected_message):
     upload_response = register(username, password)
@@ -42,13 +43,17 @@ def test_register(username, password, expected_message):
         assert upload_response['status_code'] == 201
         assert upload_response['message'] == 'User created successfully'
 
+    elif expected_message == 'weak':
+        assert upload_response['status_code'] == 402
+        assert upload_response['message'] == 'Password strength too weak'
+
     else:
         assert upload_response['status_code'] == 400
         assert upload_response['error'] == 'Username already exists'
 
 
 @pytest.mark.parametrize("username, password, expected_message", [
-    ('khangxlei', 'khang', 'success'),
+    ('khangxlei', 'Khang5472', 'success'),
     ('', '', 'empty'),
     ('khang', 'qwertyy', 'failure')
 ])

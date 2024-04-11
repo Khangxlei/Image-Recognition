@@ -8,16 +8,11 @@ from cryptography.fernet import Fernet
 
 from modules.database import get_db
 
-
 auth = Blueprint('auth', __name__)
 
 auth.config = {}
 
 logging.basicConfig(filename='auth.log', level=logging.DEBUG)
-
-
-key = Fernet.generate_key()
-cipher_suite = Fernet(key)
 
 #Functions for data sanitization
 def hash_password(password):
@@ -28,6 +23,9 @@ def hash_password(password):
 
 def verify_password(password, hashed_password):
     return bcrypt.checkpw(password.encode('utf-8'), hashed_password)
+
+encryption_key = Fernet.generate_key()
+cipher_suite = Fernet(encryption_key)
 
 def encrypt_data(data):
     if isinstance(data, str):
@@ -42,6 +40,19 @@ def decrypt_data(encrypted_data):
         # Handle invalid token error
         print("Invalid token: Unable to decrypt the data.")
         return None
+    
+# Function to check password strength
+def check_password_strength(password):
+    # Define minimum requirements for a strong password
+    min_length = 8
+    has_lowercase = any(char.islower() for char in password)
+    has_uppercase = any(char.isupper() for char in password)
+    has_digit = any(char.isdigit() for char in password)
+    
+    # Check if the password meets the minimum requirements
+    if len(password) < min_length or not has_lowercase or not has_uppercase or not has_digit:
+        return False
+    return True
 
 # Function to authenticate user
 def authenticate_user(username, password):
@@ -127,6 +138,10 @@ def register():
     username = data.get('username')
     password = data.get('password')
 
+    strong_password = check_password_strength(password)
+    if not strong_password:
+        return jsonify({'message': 'Password strength too weak', 'status_code':402}), 402
+
     #hash password then encrypts it
     hashed_password = hash_password(password)
     encrypted_hashed_password = encrypt_data(hashed_password)
@@ -154,4 +169,3 @@ def register():
 def logout():
     session.pop('user_id', None)
     return redirect(url_for('auth.login'))
-
