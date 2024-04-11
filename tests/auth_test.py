@@ -66,8 +66,5 @@ def test_login(username, password, expected_message):
         assert upload_response['status_code'] == 401
         assert upload_response['message'] == 'Invalid username or password'
 
-
-
-
 if __name__ == "__main__":
     register()
