@@ -19,6 +19,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the entire modules directory to the working directory in the container
 COPY modules /app/modules
+COPY ../app.py /app
+COPY schema.sql /app
+
+
 
 # Expose the port your app runs on
 EXPOSE 5000
