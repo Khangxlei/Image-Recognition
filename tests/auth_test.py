@@ -1,6 +1,11 @@
 import requests
 import pytest
 
+# from tests.data_upload_test import *
+# from tests.model_upload_test import *
+# from tests.train_test import *
+# from tests.inference_test import *
+
 BASE_URL = 'http://127.0.0.1:5000' 
 
 def register(username, password):
@@ -57,6 +62,7 @@ def test_register(username, password, expected_message):
     ('', '', 'empty'),
     ('khang', 'qwertyy', 'failure')
 ])
+
 def test_login(username, password, expected_message):
     upload_response = login(username, password)
     if expected_message == 'success':
@@ -70,6 +76,3 @@ def test_login(username, password, expected_message):
     else:
         assert upload_response['status_code'] == 401
         assert upload_response['message'] == 'Invalid username or password'
-
-if __name__ == "__main__":
-    register()
