@@ -1,6 +1,10 @@
 # Image-Recognition
 This is my DIY ML Project 2 as well as Final Project for ENG EC 530. This README provides detailed instructions on how to set up a Python virtual environment for this project and how to run it. Following these steps ensures that all dependencies are managed locally and do not interfere with the global Python environment.
 
+## Demo
+
+Click [here](https://drive.google.com/file/d/1rjupMNurk9r0QkKtmKUJAf1x0EQX9r4f/view?usp=drive_link) to view a demo
+
 ## Prerequisites
 
 Before you begin, ensure you have Python installed on your system. You can download Python from [python.org](https://www.python.org/downloads/).
