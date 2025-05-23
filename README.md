@@ -1,5 +1,5 @@
 # Image-Recognition
-This is my DIY ML Project 2 as well as Final Project for ENG EC 530. This README provides detailed instructions on how to set up a Python virtual environment for this project and how to run it. Following these steps ensures that all dependencies are managed locally and do not interfere with the global Python environment.
+This is a DIY ML Project. This README provides detailed instructions on how to set up a Python virtual environment for this project and how to run it. Following these steps ensures that all dependencies are managed locally and do not interfere with the global Python environment.
 
 ## Demo
 
